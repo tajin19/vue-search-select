@@ -146,7 +146,6 @@
       },
       selectItem (option) {
         this.$data.hasValue = option.hasOwnProperty("value");
-        debugger;
         this.searchText = '' // reset text when select item
         this.closeOptions()
         this.$emit('select', option)
