@@ -14,7 +14,7 @@
            @keyup.enter="enterItem"
            @keydown.delete="deleteTextOrItem"
     />
-    <div class="text testy"
+    <div class="text" v-bind:class="{textEstimator: hasValue}"
          :class="textClass">{{inputText}}
     </div>
     <div class="menu"
@@ -144,6 +144,7 @@
         common.mousedownItem(this)
       },
       selectItem (option) {
+        debugger;
         this.searchText = '' // reset text when select item
         this.closeOptions()
         this.$emit('select', option)
