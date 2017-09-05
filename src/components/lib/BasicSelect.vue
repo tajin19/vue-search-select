@@ -57,7 +57,8 @@
         showMenu: false,
         searchText: '',
         mousedownState: false, // mousedown on option menu
-        pointer: 0
+        pointer: 0,
+        hasValue: false
       }
     },
     watch: {
@@ -144,7 +145,7 @@
         common.mousedownItem(this)
       },
       selectItem (option) {
-        debugger;
+        this.$data.hasValue = option.hasOwnProperty("value");
         this.searchText = '' // reset text when select item
         this.closeOptions()
         this.$emit('select', option)
