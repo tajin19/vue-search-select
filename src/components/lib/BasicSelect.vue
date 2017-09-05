@@ -14,7 +14,7 @@
            @keyup.enter="enterItem"
            @keydown.delete="deleteTextOrItem"
     />
-    <div class="text"
+    <div class="text testy"
          :class="textClass">{{inputText}}
     </div>
     <div class="menu"
@@ -40,7 +40,7 @@
   /* event : select */
   import common from './common'
   import commonMixin from './commonMixin'
-  
+
   export default {
     mixins: [commonMixin],
     props: {
@@ -158,7 +158,7 @@
   .ui.dropdown .menu > .item:hover {
     background: none transparent !important;
   }
-  
+
   /* Menu Item Hover for Key event */
   .ui.dropdown .menu > .item.current {
     background: rgba(0, 0, 0, 0.05) !important;
