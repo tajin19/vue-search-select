@@ -14,8 +14,8 @@
            @keyup.enter="enterItem"
            @keydown.delete="deleteTextOrItem"
     />
-    <div class="text" v-bind:class="{textEstimator: hasValue}"
-         :class="textClass">{{inputText}}
+    <div class="text"
+         :class="{textEstimator: hasValue, textClass}">{{inputText}}
     </div>
     <div class="menu"
          ref="menu"
@@ -146,6 +146,7 @@
       },
       selectItem (option) {
         this.$data.hasValue = option.hasOwnProperty("value");
+        debugger;
         this.searchText = '' // reset text when select item
         this.closeOptions()
         this.$emit('select', option)
