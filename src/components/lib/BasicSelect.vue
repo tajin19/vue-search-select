@@ -145,7 +145,7 @@
         common.mousedownItem(this)
       },
       selectItem (option) {
-        this.$data.hasValue = option.hasOwnProperty("value");
+        this.$data.hasValue = option.hasOwnProperty('value')
         this.searchText = '' // reset text when select item
         this.closeOptions()
         this.$emit('select', option)
